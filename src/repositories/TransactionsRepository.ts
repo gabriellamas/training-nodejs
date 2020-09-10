@@ -53,19 +53,19 @@ class TransactionsRepository {
 
 
     // [ ---- Minha solução, muito mais legível ---- ]
-    // const newIncome = this.transactions.reduce((acumulator, currentValue)=> (currentValue.type === 'income' ? acumulator + currentValue.value : acumulator),0);
-    // const newOutCome = this.transactions.reduce((acumulator, currentValue)=> (currentValue.type === 'outcome' ? acumulator + currentValue.value : acumulator),0);
+    // const totalIncome = this.transactions.reduce((acumulator, currentValue)=> (currentValue.type === 'income' ? acumulator + currentValue.value : acumulator),0);
+    // const totalOutCome = this.transactions.reduce((acumulator, currentValue)=> (currentValue.type === 'outcome' ? acumulator + currentValue.value : acumulator),0);
 
     // const newbalance = {
-    //   income: newIncome,
-    //   outcome: newOutCome,
+    //   income: totalIncome,
+    //   outcome: totalOutCome,
     //   total: newIncome - newOutCome,
     // };
 
     // return newBalance;
 
     const total = income - outcome;
-    
+
     return { income, outcome, total};
   }
 
